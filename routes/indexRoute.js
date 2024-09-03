@@ -10,6 +10,9 @@ const mountRoutes = (app) => {
   app.use("/course", courseRoute);
   app.use("/lecture", lectureRoute);
   app.use("/admin", adminRoute);
+  app.use("/", (req, res, next) => {
+    res.send("Server Is Running");
+  });
 };
 
 module.exports = mountRoutes;

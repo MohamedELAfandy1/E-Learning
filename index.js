@@ -15,7 +15,7 @@ app.use(cors());
 app.options("*", cors());
 app.use(compression()); 
 
-dotenv.config();
+dotenv.config({ path: "config.env" });
 
 dbConnection();
 
