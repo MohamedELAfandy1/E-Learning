@@ -33,7 +33,7 @@ app.use(globalError);
 
 
 const port = process.env.PORT;
-app.listen(port, () => {
+app.listen(port || 5000, () => {
   console.log(`Server Is Running On http://localhost:${port}`);
 });
 
